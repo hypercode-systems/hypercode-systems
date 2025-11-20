@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HyperCode | Modern Web Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Basic SEO -->
+  <meta name="description" content="HyperCode - Modern Web Solutions. Responsive web design, SEO-ready websites, and custom digital experiences. Hablamos Español. Call 442-231-6866 or email Alfredo.rodriguez72399@gmail.com.">
+  <meta name="keywords" content="HyperCode, modern web solutions, web design, responsive websites, SEO, search engine optimization, Spanish speaking web design, Hablamos Espanol">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="HyperCode | Modern Web Solutions">
+  <meta property="og:description" content="Responsive web design and search engine optimized websites. Hablamos Español.">
+  <meta property="og:type" content="website">
+
+  <!-- Local Business schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "HyperCode",
+    "description": "Modern web solutions, responsive design, and SEO services.",
+    "telephone": "+1-442-231-6866",
+    "email": "Alfredo.rodriguez72399@gmail.com",
+    "areaServed": "United States",
+    "availableLanguage": ["English", "Spanish"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #030b1a;
+      --card-bg: #02091a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #1d9bf0;
+      --accent-soft: rgba(29, 155, 240, 0.1);
+      --border: #1f2937;
+      --radius-lg: 1.25rem;
+      --radius-md: 0.9rem;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #020617, #000000);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(2, 6, 23, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand img {
+      height: 38px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-text .name {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text .tagline {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .badge-es {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-size: 0.75rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    /* Hero */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 3vw + 1.7rem, 3.1rem);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      max-width: 34rem;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-highlight {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--muted);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease,
+        border-color 0.15s ease, color 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #020617;
+      font-weight: 600;
+      box-shadow: 0 14px 35px rgba(29, 155, 240, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(29, 155, 240, 0.45);
+      background: #38bdf8;
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      background: rgba(29, 155, 240, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .hero-contact {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-contact a {
+      color: var(--accent);
+    }
+
+    /* Hero card with logo */
+    .hero-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top, #020b26, #020617);
+      padding: 1.8rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-card-logo img {
+      height: 52px;
+      width: auto;
+      border-radius: 0.75rem;
+    }
+
+    .hero-card-logo-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .metric {
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .metric-value {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .metric-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .hero-seo-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 0.65rem 0.8rem;
+      border-radius: 0.7rem;
+      background: var(--accent-soft);
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 3.25rem;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.7rem;
+      max-width: 34rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: rgba(2, 6, 23, 0.95);
+      padding: 1.4rem;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .card-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--accent);
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contact section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: rgba(2, 6, 23, 0.95);
+      padding: 1.4rem;
+    }
+
+    .contact-item {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: block;
+    }
+
+    .contact-item a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .contact-form {
+      margin-top: 0.5rem;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.8rem;
+      margin-bottom: 0.15rem;
+      color: var(--muted);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      margin-bottom: 0.85rem;
+      border-radius: 0.7rem;
+      border: 1px solid var(--border);
+      background: #020617;
+      color: var(--text);
+      font-size: 0.88rem;
+    }
+
+    .contact-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(29, 155, 240, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 1.25rem 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding-top: 2.4rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        padding-inline: 1rem;
+      }
+
+      .badge-es {
+        font-size: 0.72rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <a href="#top" class="brand">
+        <!-- Your logo file must be named hypercode-logo.png -->
+        <img src="hypercode-logo.png" alt="HyperCode logo">
+        <div class="brand-text">
+          <span class="name">HyperCode</span>
+          <span class="tagline">Modern Web Solutions</span>
+        </div>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#seo">SEO</a>
+        <a href="#contact">Contact</a>
+        <span class="badge-es">Hablamos Español</span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Modern Web Solutions</div>
+        <h1>High-performance websites by <span>HyperCode</span>.</h1>
+        <p class="hero-subtitle">
+          We build fast, responsive, and search-engine-optimized websites so your
+          business looks professional on every device and gets found on Google.
+          <br><br><strong>Hablamos Español</strong> – podemos ayudarte en tu idioma.
+        </p>
+
+        <div class="hero-highlights">
+          <div class="hero-highlight">Responsive Web Design</div>
+          <div class="hero-highlight">Search Engine Optimization (SEO)</div>
+          <div class="hero-highlight">Clean, Modern UI</div>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+14422316866">
+            Call now: 442-231-6866
+          </a>
+          <a class="btn btn-outline" href="#contact">
+            Request a free quote
+          </a>
+        </div>
+
+        <p class="hero-contact">
+          Prefer email?  
+          <a href="mailto:Alfredo.rodriguez72399@gmail.com">
+            Alfredo.rodriguez72399@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <!-- Hero side card with logo & SEO note -->
+      <aside class="hero-card" aria-label="HyperCode quick information">
+        <div class="hero-card-logo">
+          <img src="hypercode-logo.png" alt="HyperCode logo">
+          <div class="hero-card-logo-text">
+            HyperCode focuses on modern, minimal designs with solid performance and
+            SEO best practices built in.
+          </div>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-label">Design</div>
+            <div class="metric-value">Responsive-first</div>
+            <div class="metric-note">
+              Looks great on phones, tablets, and desktops.
+            </div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">SEO</div>
+            <div class="metric-value">Optimized</div>
+            <div class="metric-note">
+              Clean structure, fast load times, and proper meta tags.
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-seo-note">
+          ✅ Titles, descriptions, headings, and structured data are crafted to
+          help search engines understand your business and improve your visibility.
+        </div>
+      </aside>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Services</h2>
+      <p class="section-subtitle">
+        From idea to launch, HyperCode helps you build a professional online presence
+        that actually works for your business.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="tag">Responsive Web Design</span>
+          <h3>Modern, mobile-ready websites</h3>
+          <p>
+            We design and develop websites that adapt perfectly to phones, tablets,
+            and desktops so your visitors always have a smooth experience.
+          </p>
+          <ul class="card-list">
+            <li>• Clean, professional layouts</li>
+            <li>• Fast loading pages</li>
+            <li>• Focus on usability & clarity</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="tag">Search Engine Optimization</span>
+          <h3>SEO-ready from day one</h3>
+          <p>
+            Technical and on-page basics are built directly into your site so
+            you’re ready to rank and grow organic traffic.
+          </p>
+          <ul class="card-list">
+            <li>• Optimized titles & meta tags</li>
+            <li>• Structured content & headings</li>
+            <li>• Fast, lightweight pages</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="tag">Bilingual Support</span>
+          <h3>Hablamos Español</h3>
+          <p>
+            We can create English-only, Spanish-only, or fully bilingual sites to
+            connect with more clients.
+          </p>
+          <ul class="card-list">
+            <li>• Spanish translations available</li>
+            <li>• Content tailored to your audience</li>
+            <li>• Clear communication throughout</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Section -->
+    <section id="seo">
+      <h2>SEO & Performance Built In</h2>
+      <p class="section-subtitle">
+        Your website isn’t just a digital brochure. It should load quickly,
+        look trustworthy, and be easy for search engines to understand.
+        HyperCode integrates SEO best practices from the start.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Clean Structure</h3>
+          <p>
+            Semantic HTML, heading hierarchy, and internal linking make it
+            easier for Google and other search engines to read your site.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Meta & Schema</h3>
+          <p>
+            We include meta descriptions, Open Graph tags for sharing, and
+            structured data (JSON-LD) to help your business stand out in search.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Speed & UX</h3>
+          <p>
+            Lightweight code, optimized images, and responsive layout create
+            a better user experience—and happier search engines.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="section-subtitle">
+        Ready to start a project, need a quote, or just have questions?
+        Reach out in English or Spanish.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-item">
+            <span>Phone</span>
+            <a href="tel:+14422316866">442-231-6866</a>
+          </div>
+          <div class="contact-item">
+            <span>Email</span>
+            <a href="mailto:Alfredo.rodriguez72399@gmail.com">
+              Alfredo.rodriguez72399@gmail.com
+            </a>
+          </div>
+          <div class="contact-item">
+            <span>Languages</span>
+            English &amp; Spanish — <strong>Hablamos Español</strong>
+          </div>
+          <p class="contact-note">
+            Call, text, or email and we’ll respond as soon as possible with next steps.
+          </p>
+        </div>
+
+        <div>
+          <div class="contact-form">
+            <!-- This form needs a backend service (like Formspree) to actually send email -->
+            <form>
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name">
+
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com">
+
+              <label for="message">Project details</label>
+              <textarea id="message" placeholder="Tell us what you need..."></textarea>
+
+              <button class="btn btn-primary" type="submit">
+                Send Message (demo only)
+              </button>
+            </form>
+            <p class="contact-note">
+              Note: this demo form doesn’t send yet. For now, please call or email directly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> <strong>HyperCode</strong> · Modern Web Solutions · Hablamos Español
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
