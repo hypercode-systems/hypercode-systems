@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Basic SEO -->
-  <meta name="description" content="HyperCode - Modern Web Solutions. Responsive web design, SEO-ready websites, and custom digital experiences. Hablamos Español. Call 442-231-6866 or email Alfredo.rodriguez72399@gmail.com.">
-  <meta name="keywords" content="HyperCode, modern web solutions, web design, responsive websites, SEO, search engine optimization, Spanish speaking web design, Hablamos Espanol">
+  <meta name="description" content="HyperCode - Modern Web Solutions. Responsive, SEO-ready websites with faster turnaround than Squarespace at a more affordable price. Hablamos Español. Call 442-231-6866 or email Alfredo.rodriguez72399@gmail.com.">
+  <meta name="keywords" content="HyperCode, modern web solutions, web design, responsive websites, SEO, search engine optimization, Spanish speaking web design, Hablamos Espanol, fast turnaround">
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="HyperCode | Modern Web Solutions">
-  <meta property="og:description" content="Responsive web design and search engine optimized websites. Hablamos Español.">
+  <meta property="og:description" content="Responsive, SEO-optimized websites with 7–10 business day turnaround. Hablamos Español.">
   <meta property="og:type" content="website">
 
   <!-- Local Business schema (SEO) -->
@@ -20,11 +20,11 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "HyperCode",
-    "description": "Modern web solutions, responsive design, and SEO services.",
+    "description": "Modern web solutions, responsive design, and SEO services with fast, affordable turnaround.",
     "telephone": "+1-442-231-6866",
     "email": "Alfredo.rodriguez72399@gmail.com",
     "areaServed": "United States",
-    "availableLanguage": ["English", "Spanish"]
+    "availableLanguage": ["English", "Spanish", "Hebrew", "Chinese", "Persian"]
   }
   </script>
 
@@ -92,6 +92,7 @@
       height: 38px;
       width: auto;
       display: block;
+      border-radius: 0.9rem;
     }
 
     .brand-text {
@@ -527,7 +528,6 @@
   <header>
     <div class="nav">
       <a href="#top" class="brand">
-        <!-- Your logo file must be named hypercode-logo.png -->
         <img src="hypercode-logo.png" alt="HyperCode logo">
         <div class="brand-text">
           <span class="name">HyperCode</span>
@@ -552,13 +552,15 @@
         <p class="hero-subtitle">
           We build fast, responsive, and search-engine-optimized websites so your
           business looks professional on every device and gets found on Google.
+          Faster turnaround than Squarespace at a more affordable price, with typical
+          project delivery in <strong>7–10 business days</strong>.
           <br><br><strong>Hablamos Español</strong> – podemos ayudarte en tu idioma.
         </p>
 
         <div class="hero-highlights">
           <div class="hero-highlight">Responsive Web Design</div>
           <div class="hero-highlight">Search Engine Optimization (SEO)</div>
-          <div class="hero-highlight">Clean, Modern UI</div>
+          <div class="hero-highlight">7–10 Business Day Turnaround</div>
         </div>
 
         <div class="hero-cta">
@@ -571,7 +573,7 @@
         </div>
 
         <p class="hero-contact">
-          Prefer email?  
+          Prefer email?
           <a href="mailto:Alfredo.rodriguez72399@gmail.com">
             Alfredo.rodriguez72399@gmail.com
           </a>
@@ -597,10 +599,10 @@
             </div>
           </div>
           <div class="metric">
-            <div class="metric-label">SEO</div>
-            <div class="metric-value">Optimized</div>
+            <div class="metric-label">Turnaround</div>
+            <div class="metric-value">7–10 days</div>
             <div class="metric-note">
-              Clean structure, fast load times, and proper meta tags.
+              Streamlined process for faster delivery than typical DIY platforms.
             </div>
           </div>
         </div>
@@ -617,7 +619,8 @@
       <h2>Services</h2>
       <p class="section-subtitle">
         From idea to launch, HyperCode helps you build a professional online presence
-        that actually works for your business.
+        that actually works for your business—with affordable pricing and a typical
+        turnaround of <strong>7–10 business days</strong>.
       </p>
 
       <div class="grid-3">
@@ -650,16 +653,16 @@
         </div>
 
         <div class="card">
-          <span class="tag">Bilingual Support</span>
-          <h3>Hablamos Español</h3>
+          <span class="tag">Multilingual Support</span>
+          <h3>We speak your language</h3>
           <p>
-            We can create English-only, Spanish-only, or fully bilingual sites to
-            connect with more clients.
+            Communicate clearly and comfortably throughout your project.
           </p>
           <ul class="card-list">
-            <li>• Spanish translations available</li>
-            <li>• Content tailored to your audience</li>
-            <li>• Clear communication throughout</li>
+            <li>• English &amp; Spanish — <strong>Hablamos Español</strong></li>
+            <li>• עברית (Hebrew)</li>
+            <li>• 中文 (Mandarin)</li>
+            <li>• فارسی (Farsi)</li>
           </ul>
         </div>
       </div>
@@ -704,7 +707,7 @@
       <h2>Contact</h2>
       <p class="section-subtitle">
         Ready to start a project, need a quote, or just have questions?
-        Reach out in English or Spanish.
+        Reach out in the language you’re most comfortable with.
       </p>
 
       <div class="contact-grid">
@@ -721,32 +724,37 @@
           </div>
           <div class="contact-item">
             <span>Languages</span>
-            English &amp; Spanish — <strong>Hablamos Español</strong>
+            English &amp; Spanish — <strong>Hablamos Español</strong><br>
+            עברית • 中文 • فارسی
           </div>
           <p class="contact-note">
+            Typical project turnaround is <strong>7–10 business days</strong>.
             Call, text, or email and we’ll respond as soon as possible with next steps.
           </p>
         </div>
 
         <div>
           <div class="contact-form">
-            <!-- This form needs a backend service (like Formspree) to actually send email -->
-            <form>
+            <!-- Netlify-powered contact form -->
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact">
+
               <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name">
+              <input id="name" name="name" type="text" placeholder="Your name" required>
 
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com">
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
 
               <label for="message">Project details</label>
-              <textarea id="message" placeholder="Tell us what you need..."></textarea>
+              <textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea>
 
               <button class="btn btn-primary" type="submit">
-                Send Message (demo only)
+                Send Message
               </button>
             </form>
+
             <p class="contact-note">
-              Note: this demo form doesn’t send yet. For now, please call or email directly.
+              We typically respond within one business day. For urgent projects, call or text directly.
             </p>
           </div>
         </div>
@@ -755,7 +763,7 @@
   </main>
 
   <footer>
-    © <span id="year"></span> <strong>HyperCode</strong> · Modern Web Solutions · Hablamos Español
+    © <span id="year"></span> <strong>HyperCode</strong> · Modern Web Solutions · Hablamos Español · עברית · 中文 · فارسی
   </footer>
 
   <script>
